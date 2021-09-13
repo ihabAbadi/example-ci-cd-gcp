@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/projet-group-a/flask-hello:latest','.']
+  args: ['build', '-t', 'gcr.io/projet-group-a/flask-hello-ihab-ci-cd:latest','.']
 images: [gcr.io/projet-group-a/flask-hello:latest]
