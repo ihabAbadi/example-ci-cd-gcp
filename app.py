@@ -19,7 +19,8 @@ app.logger.setLevel(logging.INFO)
 
 @app.route("/", methods=['POST','GET'])
 def hello():
-    return '<h1>Bonjour tout le monde CI/CD, 13/09/2021</h1>'
+    name = os.getenv("NAME")
+    return '<h1>Bonjour tout le monde CI/CD, 13/09/2021</h1>'+name
 
 
 if __name__ == "__main__":
