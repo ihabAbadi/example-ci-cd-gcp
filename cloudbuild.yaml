@@ -5,7 +5,7 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     waitFor: [A]
     entrypoint : gcloud
-    args : ['run', 'deploy', 'test-flask-hello-ci-cd', '--image', 'gcr.io/cellular-axon-325108/flask-hello-ihab-ci-cd:latest', '--region', 'europe-west3', '--port', '80']
-    env:
-    - 'NAME=ihab'
+    args : ['run', 'deploy', 'test-flask-hello-ci-cd', '--image', 'gcr.io/cellular-axon-325108/flask-hello-ihab-ci-cd:latest', '--region', 'europe-west3', '--port', '80', '--set-env-vars', ['NAME=toto']]
+    # env:
+    # - 'NAME=ihab'
 images: [gcr.io/cellular-axon-325108/flask-hello-ihab-ci-cd:latest]
